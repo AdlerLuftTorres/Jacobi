@@ -7,7 +7,6 @@ comm=MPI.COMM_WORLD
 rank = MPI.COMM_WORLD.Get_rank()
 
 n = int (sys.argv[1])
-
 A = []
 b = numpy.zeros(n)
 x0 = numpy.random.randint(10,size=(n))
@@ -16,7 +15,6 @@ print('x1 = ')
 print(x1)
 print('x0 = ')
 print(x0)
-
 
 def creamatriz(n):
 	A=numpy.random.randint(10,size=(n,n))
@@ -90,9 +88,5 @@ print(R)
 while(numpy.array_equal(x0,x1)==False):
 	x1=vetorxmatriz((b-(vetorxmatriz(x0,R))),alamenosuno(D))
 	x0=x1
-	#print('dentro de while x0= ')
-	#print(x0)
-	#print('dentro de while x1= ')
-	#print(x1)
-print('soluciones=')
+print('soluciones= ')
 print(x1)
